@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopEasy - Online Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" aria-label="ShopEasy home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 5h4l3 14h14l3-10H9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="25" r="2.4" fill="currentColor"/><circle cx="22" cy="25" r="2.4" fill="currentColor"/></svg>
+        <span>ShopEasy</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="#home" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <button type="button" class="cart-icon" id="cartBtn" aria-label="Open cart">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 5h4l3 14h14l3-10H9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="25" r="2.4" fill="currentColor"/><circle cx="22" cy="25" r="2.4" fill="currentColor"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy" id="heroCopy">
+          <h1 id="heroTitle">Shop Smarter,<br><em>Live Better</em></h1>
+          <p id="heroText">Discover amazing products at unbeatable prices.</p>
+          <a href="#shop" class="btn">Shop Now <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 320 270">
+            <g class="bag b1"><path d="M70 90h66l6 120H64z" fill="#ff4fa3"/><path d="M88 90c0-26 30-26 30 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>
+            <g class="bag b2"><path d="M130 60h70l6 150h-82z" fill="#ffb21f"/><path d="M152 60c0-30 34-30 34 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>
+            <g class="bag b3"><path d="M196 96h66l-8 114h-52z" fill="#7a3cf0"/><path d="M216 96c0-26 28-26 28 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>
+            <g class="bag b4"><path d="M100 120h46l4 90h-58z" fill="#2fd7a8"/></g>
+            <path d="M10 40h36l22 140h170l30-96H64" fill="none" stroke="#e8f0ff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M78 110h200M82 140h178M88 168h160M110 84l8 96M150 84l4 96M190 84l-2 96M230 84l-12 96" stroke="#e8f0ff" stroke-width="3.5" stroke-linecap="round" opacity=".85"/>
+            <circle cx="100" cy="226" r="14" fill="#16275f" stroke="#e8f0ff" stroke-width="5"/>
+            <circle cx="226" cy="226" r="14" fill="#16275f" stroke="#e8f0ff" stroke-width="5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="dots" id="dots" role="tablist" aria-label="Hero slides"></div>
+    </section>
+
+    <!-- ===== Shop ===== -->
+    <section class="section container" id="shop">
+      <h2 class="sec-title">Featured Products</h2>
+      <div class="products" id="products"></div>
+    </section>
+
+    <!-- ===== Promos ===== -->
+    <section class="container promos" aria-label="Promotions">
+      <article class="promo offers">
+        <div class="promo-ico" aria-hidden="true">&#127873;</div>
+        <div>
+          <h3>Special Offers</h3>
+          <p>Up to 50% OFF</p>
+          <a href="#shop" class="btn small">Shop Now</a>
+        </div>
+      </article>
+      <article class="promo delivery">
+        <div class="promo-ico" aria-hidden="true">&#128666;</div>
+        <div>
+          <h3>Free Delivery</h3>
+          <p>On All Orders</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section container about" id="about">
+      <h2 class="sec-title">About ShopEasy</h2>
+      <p>ShopEasy brings you carefully chosen products at fair prices, delivered free to your door. Browse, add to your cart and check out in a few taps, on any device.</p>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section container" id="contact">
+      <h2 class="sec-title">Contact Us</h2>
+      <form class="contact" id="contactForm" novalidate>
+        <label>Name<input id="cName" type="text" autocomplete="name"></label>
+        <label>Email<input id="cEmail" type="email" autocomplete="email"></label>
+        <label>Message<textarea id="cMsg" rows="4"></textarea></label>
+        <p class="err" id="cErr" role="alert"></p>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Trust bar ===== -->
+  <footer class="trust">
+    <div class="container trust-grid">
+      <div><span aria-hidden="true">&#128737;</span><b>Secure<br>Payment</b></div>
+      <div><span aria-hidden="true">&#127911;</span><b>24/7<br>Support</b></div>
+      <div><span aria-hidden="true">&#8634;</span><b>Easy<br>Returns</b></div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> ShopEasy</p>
+  </footer>
+
+  <!-- ===== Cart drawer ===== -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" inert>
+    <div class="drawer-head">
+      <h2>Your Cart</h2>
+      <button type="button" class="x" id="closeCart" aria-label="Close cart">&times;</button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+      <p class="free">Delivery is free on all orders.</p>
+      <button type="button" class="btn full" id="checkout">Checkout</button>
+      <button type="button" class="link" id="clearCart">Clear cart</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
